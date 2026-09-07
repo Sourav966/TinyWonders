@@ -1,300 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Tiny wondrs - Coming Soon</title>
-   
+    <meta name="description"
+        content="BookNest - Your upcoming online bookstore for books, education, fiction and competitive exams.">
+
+    <title>BookNest | Coming Soon</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-     <link rel="stylesheet"href="style.css">      
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+    <!-- =========================
+         TOP MARQUEE
+    ========================== -->
 
-<!-- =========================================
-     TOP MARQUEE
-========================================= -->
+    <div class="marquee-bar">
 
-<div class="marquee-container">
+        <marquee behavior="scroll" direction="left" scrollamount="6">
 
-    <marquee
-        behavior="scroll"
-        direction="left"
-        scrollamount="6">
+            📚 BOOKNEST
+            &nbsp; • &nbsp;
 
-        📚 TINYWONDERS &nbsp; • &nbsp;
-        NEW BOOKS ARRIVING SOON &nbsp; • &nbsp;
-        BESTSELLERS &nbsp; • &nbsp;
-        FICTION &nbsp; • &nbsp;
-        NON-FICTION &nbsp; • &nbsp;
-        COMPETITIVE EXAM BOOKS &nbsp; • &nbsp;
-        SCHOOL BOOKS &nbsp; • &nbsp;
-        COLLEGE BOOKS &nbsp; • &nbsp;
-        COMING SOON &nbsp; • &nbsp;
-        STAY TUNED! 📚
+            NEW BOOKS ARRIVING SOON
+            &nbsp; • &nbsp;
 
-    </marquee>
+            BESTSELLERS
+            &nbsp; • &nbsp;
 
-</div>
+            FICTION
+            &nbsp; • &nbsp;
 
+            NON-FICTION
+            &nbsp; • &nbsp;
 
+            SCHOOL BOOKS
+            &nbsp; • &nbsp;
 
-<!-- =========================================
-     NAVIGATION BAR
-========================================= -->
+            COLLEGE BOOKS
+            &nbsp; • &nbsp;
 
-<header class="navbar">
+            COMPETITIVE EXAM BOOKS
+            &nbsp; • &nbsp;
 
+            COMING SOON
+            &nbsp; • &nbsp;
 
-    <!-- LOGO -->
+            STAY TUNED! 📚
 
-    <a href="#"
-       class="logo">
-
-        <div class="logo-icon">
-
-            <i class="fa-solid fa-book-open"></i>
-
-        </div>
-
-
-        <div class="logo-text">
-
-            <h1>
-                Tiny<span>Wondrs</span>
-            </h1>
-
-            <p>
-                YOUR WORLD OF BOOKS
-            </p>
-
-        </div>
-
-    </a>
-
-
-
-    <!-- NAVIGATION -->
-
-    <nav class="nav-menu"
-         id="navMenu">
-
-        <a href="#home"
-           class="active">
-
-            <i class="fa-solid fa-house"></i>
-
-            Home
-
-        </a>
-
-
-        <a href="#about">
-
-            <i class="fa-solid fa-circle-info"></i>
-
-            About
-
-        </a>
-
-
-        <a href="#books">
-
-            <i class="fa-solid fa-book"></i>
-
-            Books
-
-        </a>
-
-
-        <a href="#contact">
-
-            <i class="fa-solid fa-phone"></i>
-
-            Contact
-
-        </a>
-
-    </nav>
-
-
-
-    <!-- RIGHT SIDE -->
-
-    <div class="nav-right">
-
-
-        <!-- SEARCH -->
-
-        <div class="search-box">
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search books...">
-
-            <button
-                id="searchButton">
-
-                <i class="fa-solid fa-magnifying-glass"></i>
-
-            </button>
-
-        </div>
-
-
-
-        <!-- WHATSAPP -->
-
-        <a href="https://wa.me/919999999999"
-           target="_blank"
-           class="whatsapp"
-           title="Chat on WhatsApp">
-
-            <i class="fa-brands fa-whatsapp"></i>
-
-        </a>
-
-
-
-        <!-- LOGIN -->
-
-        <a href="#login"
-           class="login-button">
-
-            <i class="fa-regular fa-user"></i>
-
-            <span>Login</span>
-
-        </a>
-
+        </marquee>
 
     </div>
 
 
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-    <!-- MOBILE MENU -->
+    <header class="navbar">
 
-    <button
-        class="menu-toggle"
-        id="menuToggle">
+        <div class="nav-container">
 
-        <i class="fa-solid fa-bars"></i>
+            <!-- LOGO -->
 
-    </button>
+            <a href="#home" class="brand">
 
+                <img src="images/logo.png"
+                     alt="BookNest Logo"
+                     class="logo-image">
 
-</header>
+                <div class="brand-text">
+                    <h1>Book<span>Nest</span></h1>
+                    <p>YOUR WORLD OF BOOKS</p>
+                </div>
 
-    <!-- ================= MAIN ================= -->
-
-    <main class="main">
-
-        <section class="maintenance">
-
-            <!-- Decorative books -->
-
-            <div class="floating-book book-one">📕</div>
-            <div class="floating-book book-two">📗</div>
-            <div class="floating-book book-three">📘</div>
+            </a>
 
 
-            <!-- Book Illustration -->
+            <!-- HAMBURGER -->
 
-            <div class="book-illustration">
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
 
-                <div class="book-stack">
+                <i class="fa-solid fa-bars"></i>
 
-                    <div class="book book-red"></div>
-                    <div class="book book-blue"></div>
-                    <div class="book book-green"></div>
+            </button>
+
+
+            <!-- NAVIGATION MENU -->
+
+            <nav class="nav-menu" id="navMenu">
+
+                <!-- HOME -->
+
+                <a href="#home" class="nav-link active">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Home</span>
+
+                </a>
+
+
+                <!-- ABOUT -->
+
+                <a href="#about" class="nav-link">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <span>About</span>
+
+                </a>
+
+
+                <!-- SEARCH -->
+
+                <div class="search-container">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search books..."
+                        autocomplete="off">
+
+                    <button
+                        type="button"
+                        id="searchButton"
+                        aria-label="Search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </button>
 
                 </div>
 
-                <div class="open-book">
 
-                    <div class="page left-page">
-                        <span>TINY</span>
-                    </div>
+                <!-- WHATSAPP -->
 
-                    <div class="page right-page">
-                        <span>WONDERS</span>
-                    </div>
+                <a
+                    href="https://wa.me/YOUR_NUMBER"
+                    class="whatsapp-link"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-                </div>
+                    <i class="fa-brands fa-whatsapp"></i>
 
+                    <span>WhatsApp</span>
+
+                </a>
+
+
+                <!-- LOGIN -->
+
+                <a href="#login" class="login-link">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <span>Login</span>
+
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main id="home">
+
+        <section class="hero">
+
+            <!-- Floating Books -->
+
+            <div class="floating-book floating-one">
+                📕
+            </div>
+
+            <div class="floating-book floating-two">
+                📗
+            </div>
+
+            <div class="floating-book floating-three">
+                📘
             </div>
 
 
-            <!-- Content -->
+            <!-- LEFT CONTENT -->
 
-            <div class="content">
+            <div class="hero-content">
 
-                <div class="badge">
-                    🚀 LAUNCHING SOON
+                <div class="launch-badge">
+
+                    <span>🚀</span>
+
+                    LAUNCHING SOON
+
                 </div>
 
+
                 <h2>
+
                     Something Amazing
                     <br>
+
                     <span>Is Coming!</span>
+
                 </h2>
 
-                <p class="description">
+
+                <p class="hero-description">
+
                     We're building a beautiful new home for book lovers.
                     Our online bookstore is currently under maintenance
                     while we prepare something special for you.
+
                 </p>
 
 
-                <!-- Countdown -->
+                <!-- NOTIFICATION BOX -->
 
-               
+                <div class="notification-box">
 
-
-                <!-- Notify Form -->
-
-                <div class="notify">
-
-                    <h3>Be the first to know</h3>
+                    <h3>
+                        Be the first to know
+                    </h3>
 
                     <p>
                         Enter your email and we'll notify you when we launch.
                     </p>
 
+
                     <form id="notifyForm">
 
-                        <div class="email-box">
+                        <div class="email-wrapper">
 
                             <input
                                 type="email"
-                                id="email"
+                                id="emailInput"
                                 placeholder="Enter your email address"
-                                required
-                            >
+                                required>
 
                             <button type="submit">
-                                Notify Me →
+
+                                Notify Me
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
                             </button>
 
                         </div>
@@ -307,58 +284,153 @@
 
             </div>
 
+
+            <!-- BOOK ILLUSTRATION -->
+
+            <div class="book-area">
+
+                <div class="book-stack">
+
+                    <div class="stack-book stack-red"></div>
+
+                    <div class="stack-book stack-blue"></div>
+
+                    <div class="stack-book stack-green"></div>
+
+                </div>
+
+
+                <div class="open-book">
+
+                    <div class="book-page left-page">
+
+                        <span>BOOK</span>
+
+                    </div>
+
+                    <div class="book-page right-page">
+
+                        <span>NEST</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
     </main>
 
 
-    <!-- ================= FEATURES ================= -->
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
-    <section class="features">
+    <section id="about" class="about-section">
 
-        <div class="feature">
+        <div class="section-container">
 
-            <div class="feature-icon">📚</div>
+            <div class="section-label">
+                ABOUT US
+            </div>
+
+            <h2>
+                A New Home For
+                <span>Book Lovers</span>
+            </h2>
+
+            <p>
+
+                BookNest is an upcoming online bookstore created for
+                readers, students and book lovers. Discover novels,
+                educational books, competitive exam books, bestsellers
+                and much more.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURES
+    ========================== -->
+
+    <section class="features-section">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+
+                <i class="fa-solid fa-book"></i>
+
+            </div>
 
             <div>
+
                 <h3>Huge Collection</h3>
+
                 <p>Thousands of books</p>
+
             </div>
 
         </div>
 
 
-        <div class="feature">
+        <div class="feature-card">
 
-            <div class="feature-icon">🚚</div>
+            <div class="feature-icon">
+
+                <i class="fa-solid fa-truck-fast"></i>
+
+            </div>
 
             <div>
+
                 <h3>Fast Delivery</h3>
+
                 <p>Books at your doorstep</p>
+
             </div>
 
         </div>
 
 
-        <div class="feature">
+        <div class="feature-card">
 
-            <div class="feature-icon">💳</div>
+            <div class="feature-icon">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+            </div>
 
             <div>
+
                 <h3>Secure Payment</h3>
+
                 <p>Safe & trusted checkout</p>
+
             </div>
 
         </div>
 
 
-        <div class="feature">
+        <div class="feature-card">
 
-            <div class="feature-icon">⭐</div>
+            <div class="feature-icon">
+
+                <i class="fa-solid fa-star"></i>
+
+            </div>
 
             <div>
+
                 <h3>Best Sellers</h3>
+
                 <p>Discover trending books</p>
+
             </div>
 
         </div>
@@ -366,32 +438,90 @@
     </section>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- =========================
+         LOGIN PLACEHOLDER
+    ========================== -->
+
+    <section id="login" class="login-section">
+
+        <div>
+
+            <div class="section-label">
+                MEMBER LOGIN
+            </div>
+
+            <h2>
+                Login Coming Soon
+            </h2>
+
+            <p>
+                Our customer account system will be available
+                when BookNest launches.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer>
 
-        <div class="footer-logo">
-            📖 <strong>Tiny Wonder</strong>
-        </div>
+        <div class="footer-content">
 
-        <p>
-            © 2026 Tiny Wonders. Your next great story starts here.
-        </p>
+            <div class="footer-brand">
 
-        <div class="social">
+                <img src="images/logo.png"
+                     alt="BookNest Logo">
 
-            <a href="#">f</a>
-            <a href="#">𝕏</a>
-            <a href="#">in</a>
-            <a href="#">◎</a>
+                <strong>BookNest</strong>
+
+            </div>
+
+
+            <p>
+                © 2026 BookNest. Your next great story starts here.
+            </p>
+
+
+            <div class="social-links">
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a
+                    href="https://wa.me/YOUR_NUMBER"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
 
         </div>
 
     </footer>
 
 
+    <!-- JAVASCRIPT -->
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
-```

@@ -4,62 +4,207 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tiny Wonders — Coming Soon</title>
+   <title>Tiny wondrs - Coming Soon</title>
+   
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+     <link rel="stylesheet"href="style.css">      
+
+    
+
 </head>
+
 
 <body>
 
-    <!-- ================= HEADER ================= -->
 
-    <header class="header">
-         
+<!-- =========================================
+     TOP MARQUEE
+========================================= -->
 
-        <div class="logo">
+<div class="marquee-container">
 
-            <div class="logo-icon">
-                <span>📖</span>
-            </div>
+    <marquee
+        behavior="scroll"
+        direction="left"
+        scrollamount="6">
 
-            <div class="logo-text">
-                <h1>Tiny<span> Wonders</span></h1>
-                <p>Your World of Books</p>
-            </div>
+        📚 TINYWONDERS &nbsp; • &nbsp;
+        NEW BOOKS ARRIVING SOON &nbsp; • &nbsp;
+        BESTSELLERS &nbsp; • &nbsp;
+        FICTION &nbsp; • &nbsp;
+        NON-FICTION &nbsp; • &nbsp;
+        COMPETITIVE EXAM BOOKS &nbsp; • &nbsp;
+        SCHOOL BOOKS &nbsp; • &nbsp;
+        COLLEGE BOOKS &nbsp; • &nbsp;
+        COMING SOON &nbsp; • &nbsp;
+        STAY TUNED! 📚
+
+    </marquee>
+
+</div>
+
+
+
+<!-- =========================================
+     NAVIGATION BAR
+========================================= -->
+
+<header class="navbar">
+
+
+    <!-- LOGO -->
+
+    <a href="#"
+       class="logo">
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-book-open"></i>
 
         </div>
 
-        <div class="header-status">
-            <span class="status-dot"></span>
-            Website Maintenance
+
+        <div class="logo-text">
+
+            <h1>
+                Tiny<span>Wondrs</span>
+            </h1>
+
+            <p>
+                YOUR WORLD OF BOOKS
+            </p>
+
         </div>
 
-    </header>
+    </a>
 
 
-    <!-- ================= MARQUEE ================= -->
-    <div class="marquee-container">
 
-        <marquee behavior="scroll" direction="left" scrollamount="6">
+    <!-- NAVIGATION -->
 
-            📚 &nbsp; Tiny Wonders IS GETTING READY &nbsp; • &nbsp;
-            NEW BOOKS &nbsp; • &nbsp;
-            BESTSELLERS &nbsp; • &nbsp;
-            EXCLUSIVE COLLECTIONS &nbsp; • &nbsp;
-            COMING SOON &nbsp; • &nbsp;
-            STAY TUNED! &nbsp; 📚
+    <nav class="nav-menu"
+         id="navMenu">
 
-        </marquee>
+        <a href="#home"
+           class="active">
+
+            <i class="fa-solid fa-house"></i>
+
+            Home
+
+        </a>
+
+
+        <a href="#about">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            About
+
+        </a>
+
+
+        <a href="#books">
+
+            <i class="fa-solid fa-book"></i>
+
+            Books
+
+        </a>
+
+
+        <a href="#contact">
+
+            <i class="fa-solid fa-phone"></i>
+
+            Contact
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="nav-right">
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search books...">
+
+            <button
+                id="searchButton">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- WHATSAPP -->
+
+        <a href="https://wa.me/919999999999"
+           target="_blank"
+           class="whatsapp"
+           title="Chat on WhatsApp">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+        </a>
+
+
+
+        <!-- LOGIN -->
+
+        <a href="#login"
+           class="login-button">
+
+            <i class="fa-regular fa-user"></i>
+
+            <span>Login</span>
+
+        </a>
+
 
     </div>
 
-   
 
+
+    <!-- MOBILE MENU -->
+
+    <button
+        class="menu-toggle"
+        id="menuToggle">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+
+</header>
 
     <!-- ================= MAIN ================= -->
 

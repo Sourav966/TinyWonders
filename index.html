@@ -1,15 +1,279 @@
-<html>
-  <head>
-    <title>
-      Tiny Wonders
-    </title>
-  </head>
-  <body>
-    <h1>
-      hello comming soon
-    </h1>
-  </body>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BookNest — Coming Soon</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <span>📖</span>
+            </div>
+
+            <div class="logo-text">
+                <h1>Book<span>Nest</span></h1>
+                <p>Your World of Books</p>
+            </div>
+
+        </div>
+
+        <div class="header-status">
+            <span class="status-dot"></span>
+            Website Maintenance
+        </div>
+
+    </header>
+
+
+    <!-- ================= MARQUEE ================= -->
+
+    <div class="marquee-container">
+
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+
+            📚 &nbsp; BOOKNEST IS GETTING READY &nbsp; • &nbsp;
+            NEW BOOKS &nbsp; • &nbsp;
+            BESTSELLERS &nbsp; • &nbsp;
+            EXCLUSIVE COLLECTIONS &nbsp; • &nbsp;
+            COMING SOON &nbsp; • &nbsp;
+            STAY TUNED! &nbsp; 📚
+
+        </marquee>
+
+    </div>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <section class="maintenance">
+
+            <!-- Decorative books -->
+
+            <div class="floating-book book-one">📕</div>
+            <div class="floating-book book-two">📗</div>
+            <div class="floating-book book-three">📘</div>
+
+
+            <!-- Book Illustration -->
+
+            <div class="book-illustration">
+
+                <div class="book-stack">
+
+                    <div class="book book-red"></div>
+                    <div class="book book-blue"></div>
+                    <div class="book book-green"></div>
+
+                </div>
+
+                <div class="open-book">
+
+                    <div class="page left-page">
+                        <span>BOOK</span>
+                    </div>
+
+                    <div class="page right-page">
+                        <span>NEST</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Content -->
+
+            <div class="content">
+
+                <div class="badge">
+                    🚀 LAUNCHING SOON
+                </div>
+
+                <h2>
+                    Something Amazing
+                    <br>
+                    <span>Is Coming!</span>
+                </h2>
+
+                <p class="description">
+                    We're building a beautiful new home for book lovers.
+                    Our online bookstore is currently under maintenance
+                    while we prepare something special for you.
+                </p>
+
+
+                <!-- Countdown -->
+
+                <div class="countdown">
+
+                    <div class="time-box">
+                        <strong id="days">00</strong>
+                        <span>Days</span>
+                    </div>
+
+                    <div class="separator">:</div>
+
+                    <div class="time-box">
+                        <strong id="hours">00</strong>
+                        <span>Hours</span>
+                    </div>
+
+                    <div class="separator">:</div>
+
+                    <div class="time-box">
+                        <strong id="minutes">00</strong>
+                        <span>Minutes</span>
+                    </div>
+
+                    <div class="separator">:</div>
+
+                    <div class="time-box">
+                        <strong id="seconds">00</strong>
+                        <span>Seconds</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Notify Form -->
+
+                <div class="notify">
+
+                    <h3>Be the first to know</h3>
+
+                    <p>
+                        Enter your email and we'll notify you when we launch.
+                    </p>
+
+                    <form id="notifyForm">
+
+                        <div class="email-box">
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email address"
+                                required
+                            >
+
+                            <button type="submit">
+                                Notify Me →
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                    <div id="message"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">📚</div>
+
+            <div>
+                <h3>Huge Collection</h3>
+                <p>Thousands of books</p>
+            </div>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">🚚</div>
+
+            <div>
+                <h3>Fast Delivery</h3>
+                <p>Books at your doorstep</p>
+            </div>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">💳</div>
+
+            <div>
+                <h3>Secure Payment</h3>
+                <p>Safe & trusted checkout</p>
+            </div>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">⭐</div>
+
+            <div>
+                <h3>Best Sellers</h3>
+                <p>Discover trending books</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            📖 <strong>BookNest</strong>
+        </div>
+
+        <p>
+            © 2026 BookNest. Your next great story starts here.
+        </p>
+
+        <div class="social">
+
+            <a href="#">f</a>
+            <a href="#">𝕏</a>
+            <a href="#">in</a>
+            <a href="#">◎</a>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
 </html>
-<style>
-  h1.bgcolour=red
-</style>
+```

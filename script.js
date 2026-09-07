@@ -111,7 +111,7 @@ function searchBooks() {
     }
 
     alert(
-        "BookNest is currently under maintenance.\n\n" +
+        "Tiny Wonder is currently under maintenance.\n\n" +
         "Your search: " +
         searchText
     );

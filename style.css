@@ -57,6 +57,31 @@ body {
 marquee {
     width: 100%;
 }
+.navbar {
+
+    width: 100%;
+
+    min-height: 82px;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0%;
+
+    border-bottom: 1px solid #eee8f8;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+}
 
 .logo {
     display: flex;

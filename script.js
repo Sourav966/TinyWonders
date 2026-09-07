@@ -1,136 +1,140 @@
-```javascript
 /* =========================================
-   BOOKNEST — MAINTENANCE PAGE
+   MOBILE MENU
 ========================================= */
 
+const menuToggle =
+    document.getElementById("menuToggle");
 
-/* =========================================
-   COUNTDOWN TIMER
-========================================= */
-
-// Set your launch date here
-const launchDate = new Date("December 31, 2026 23:59:59").getTime();
+const navMenu =
+    document.getElementById("navMenu");
 
 
-function updateCountdown() {
+menuToggle.addEventListener(
+    "click",
+    function () {
 
-    const now = new Date().getTime();
+        navMenu.classList.toggle("show");
 
-    const difference = launchDate - now;
+        const icon =
+            menuToggle.querySelector("i");
 
 
-    // If countdown is finished
-    if (difference <= 0) {
+        if (navMenu.classList.contains("show")) {
 
-        document.getElementById("days").textContent = "00";
-        document.getElementById("hours").textContent = "00";
-        document.getElementById("minutes").textContent = "00";
-        document.getElementById("seconds").textContent = "00";
+            icon.classList.remove("fa-bars");
 
-        return;
+            icon.classList.add("fa-xmark");
+
+        } else {
+
+            icon.classList.remove("fa-xmark");
+
+            icon.classList.add("fa-bars");
+
+        }
+
     }
+);
 
 
-    // Calculate time
-    const days = Math.floor(
-        difference / (1000 * 60 * 60 * 24)
-    );
+/* =========================================
+   SEARCH
+========================================= */
 
-    const hours = Math.floor(
-        (difference / (1000 * 60 * 60)) % 24
-    );
+const searchButton =
+    document.getElementById("searchButton");
 
-    const minutes = Math.floor(
-        (difference / (1000 * 60)) % 60
-    );
-
-    const seconds = Math.floor(
-        (difference / 1000) % 60
-    );
+const searchInput =
+    document.getElementById("searchInput");
 
 
-    // Display
-    document.getElementById("days").textContent =
-        String(days).padStart(2, "0");
+searchButton.addEventListener(
+    "click",
+    function () {
 
-    document.getElementById("hours").textContent =
-        String(hours).padStart(2, "0");
-
-    document.getElementById("minutes").textContent =
-        String(minutes).padStart(2, "0");
-
-    document.getElementById("seconds").textContent =
-        String(seconds).padStart(2, "0");
-}
+        const searchText =
+            searchInput.value.trim();
 
 
-// Update immediately
-updateCountdown();
+        if (searchText === "") {
+
+            searchInput.focus();
+
+            return;
+
+        }
 
 
-// Update every second
-setInterval(updateCountdown, 1000);
+        alert(
+            "Book search will be available after launch.\n\nSearching for: "
+            + searchText
+        );
+
+    }
+);
+
+
+/* =========================================
+   SEARCH WITH ENTER
+========================================= */
+
+searchInput.addEventListener(
+    "keypress",
+    function (event) {
+
+        if (event.key === "Enter") {
+
+            searchButton.click();
+
+        }
+
+    }
+);
 
 
 /* =========================================
    EMAIL NOTIFICATION
 ========================================= */
 
-const form = document.getElementById("notifyForm");
+const form =
+    document.getElementById("notifyForm");
 
-const emailInput = document.getElementById("email");
+const emailInput =
+    document.getElementById("email");
 
-const message = document.getElementById("message");
-
-
-form.addEventListener("submit", function(event) {
-
-    event.preventDefault();
+const message =
+    document.getElementById("message");
 
 
-    const email = emailInput.value.trim();
+form.addEventListener(
+    "submit",
+    function (event) {
+
+        event.preventDefault();
 
 
-    if (email === "") {
+        const email =
+            emailInput.value.trim();
+
+
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+        if (!emailPattern.test(email)) {
+
+            message.textContent =
+                "Please enter a valid email address.";
+
+            return;
+
+        }
+
 
         message.textContent =
-            "Please enter your email address.";
+            "✓ You're on the list! We'll notify you when we launch.";
 
-        return;
+        emailInput.value = "";
+
     }
-
-
-    // Simple email validation
-    const emailPattern =
-        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-
-    if (!emailPattern.test(email)) {
-
-        message.textContent =
-            "Please enter a valid email address.";
-
-        return;
-    }
-
-
-    // Success message
-    message.textContent =
-        "✓ You're on the list! We'll notify you when we launch.";
-
-    emailInput.value = "";
-
-});
-
-
-/* =========================================
-   PAGE LOAD ANIMATION
-========================================= */
-
-window.addEventListener("load", function() {
-
-    document.querySelector(".maintenance").style.opacity = "1";
-
-});
-```
-
+);

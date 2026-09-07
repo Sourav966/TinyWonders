@@ -1,90 +1,137 @@
 /* =========================================
-   MOBILE MENU
+   MOBILE NAVIGATION
 ========================================= */
 
-const menuToggle =
-    document.getElementById("menuToggle");
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
 
-const navMenu =
-    document.getElementById("navMenu");
+menuToggle.addEventListener("click", function () {
 
+    navMenu.classList.toggle("open");
 
-menuToggle.addEventListener(
-    "click",
-    function () {
+    const isOpen = navMenu.classList.contains("open");
 
-        navMenu.classList.toggle("show");
+    menuToggle.setAttribute("aria-expanded", isOpen);
 
-        const icon =
-            menuToggle.querySelector("i");
+    const icon = menuToggle.querySelector("i");
 
+    if (isOpen) {
 
-        if (navMenu.classList.contains("show")) {
+        icon.classList.remove("fa-bars");
 
-            icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
 
-            icon.classList.add("fa-xmark");
+    } else {
 
-        } else {
+        icon.classList.remove("fa-xmark");
 
-            icon.classList.remove("fa-xmark");
-
-            icon.classList.add("fa-bars");
-
-        }
+        icon.classList.add("fa-bars");
 
     }
-);
+
+});
+
+
+/* =========================================
+   CLOSE MOBILE MENU AFTER CLICK
+========================================= */
+
+const navLinks = document.querySelectorAll(".nav-menu a");
+
+navLinks.forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navMenu.classList.remove("open");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        const icon = menuToggle.querySelector("i");
+
+        icon.classList.remove("fa-xmark");
+
+        icon.classList.add("fa-bars");
+
+    });
+
+});
+
+
+/* =========================================
+   CLOSE MENU WHEN CLICKING OUTSIDE
+========================================= */
+
+document.addEventListener("click", function (event) {
+
+    const clickedInsideMenu =
+        navMenu.contains(event.target);
+
+    const clickedToggle =
+        menuToggle.contains(event.target);
+
+    if (!clickedInsideMenu && !clickedToggle) {
+
+        navMenu.classList.remove("open");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        const icon = menuToggle.querySelector("i");
+
+        icon.classList.remove("fa-xmark");
+
+        icon.classList.add("fa-bars");
+
+    }
+
+});
 
 
 /* =========================================
    SEARCH
 ========================================= */
 
+const searchInput =
+    document.getElementById("searchInput");
+
 const searchButton =
     document.getElementById("searchButton");
 
-const searchInput =
-    document.getElementById("searchInput");
+
+function searchBooks() {
+
+    const searchText =
+        searchInput.value.trim();
+
+    if (searchText === "") {
+
+        searchInput.focus();
+
+        return;
+
+    }
+
+    alert(
+        "BookNest is currently under maintenance.\n\n" +
+        "Your search: " +
+        searchText
+    );
+
+}
 
 
 searchButton.addEventListener(
     "click",
-    function () {
-
-        const searchText =
-            searchInput.value.trim();
-
-
-        if (searchText === "") {
-
-            searchInput.focus();
-
-            return;
-
-        }
-
-
-        alert(
-            "Book search will be available after launch.\n\nSearching for: "
-            + searchText
-        );
-
-    }
+    searchBooks
 );
 
 
-/* =========================================
-   SEARCH WITH ENTER
-========================================= */
-
 searchInput.addEventListener(
-    "keypress",
+    "keydown",
     function (event) {
 
         if (event.key === "Enter") {
 
-            searchButton.click();
+            searchBooks();
 
         }
 
@@ -96,26 +143,24 @@ searchInput.addEventListener(
    EMAIL NOTIFICATION
 ========================================= */
 
-const form =
+const notifyForm =
     document.getElementById("notifyForm");
 
 const emailInput =
-    document.getElementById("email");
+    document.getElementById("emailInput");
 
 const message =
     document.getElementById("message");
 
 
-form.addEventListener(
+notifyForm.addEventListener(
     "submit",
     function (event) {
 
         event.preventDefault();
 
-
         const email =
             emailInput.value.trim();
-
 
         const emailPattern =
             /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -126,6 +171,9 @@ form.addEventListener(
             message.textContent =
                 "Please enter a valid email address.";
 
+            message.style.color =
+                "#dc2626";
+
             return;
 
         }
@@ -134,7 +182,70 @@ form.addEventListener(
         message.textContent =
             "✓ You're on the list! We'll notify you when we launch.";
 
+        message.style.color =
+            "#16a34a";
+
         emailInput.value = "";
+
+    }
+);
+
+
+/* =========================================
+   ACTIVE NAVIGATION
+========================================= */
+
+const sections =
+    document.querySelectorAll(
+        "main, section[id]"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    function () {
+
+        let currentSection = "home";
+
+        sections.forEach(
+            function (section) {
+
+                const sectionTop =
+                    section.offsetTop;
+
+                if (
+                    window.scrollY >=
+                    sectionTop - 180
+                ) {
+
+                    currentSection =
+                        section.id || "home";
+
+                }
+
+            }
+        );
+
+
+        navLinks.forEach(
+            function (link) {
+
+                link.classList.remove("active");
+
+                const linkTarget =
+                    link.getAttribute("href");
+
+                if (
+                    linkTarget ===
+                    "#" + currentSection
+                ) {
+
+                    link.classList.add("active");
+
+                }
+
+            }
+        );
 
     }
 );

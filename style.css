@@ -40,6 +40,23 @@ body {
     padding: 0 7%;
     border-bottom: 1px solid #eee8f8;
 }
+.marquee-container {
+    background: var(--dark);
+    color: white;
+
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+}
+
+marquee {
+    width: 100%;
+}
 
 .logo {
     display: flex;
@@ -111,23 +128,6 @@ body {
    MARQUEE
 ========================================= */
 
-.marquee-container {
-    background: var(--dark);
-    color: white;
-
-    height: 38px;
-
-    display: flex;
-    align-items: center;
-
-    font-size: 12px;
-
-    letter-spacing: 1.5px;
-}
-
-marquee {
-    width: 100%;
-}
 
 
 /* =========================================
